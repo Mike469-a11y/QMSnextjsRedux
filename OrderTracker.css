@@ -1,0 +1,1118 @@
+/* ✅ ORDER TRACKER - COMPLETE WITH ATTACHMENTS */
+
+/* Container & Layout */
+.order-tracker-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.order-tracker-header {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(220, 53, 69, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-tracker-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-tracker-back-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.order-tracker-back-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.order-tracker-title-section h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.order-tracker-title-section p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 0.9rem;
+}
+
+.order-tracker-header-right {
+    text-align: right;
+}
+
+.order-tracker-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+}
+
+.order-tracker-current-time {
+    font-family: 'SF Mono', Monaco, monospace;
+    opacity: 0.9;
+}
+
+/* Controls Section */
+.order-tracker-controls {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border: 1px solid #e1e8ed;
+}
+
+.order-tracker-stats-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-tracker-total-entries {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #dc3545;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.order-tracker-total-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.order-tracker-total-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.order-tracker-search-container {
+    position: relative;
+    flex: 1;
+    max-width: 350px;
+}
+
+.order-tracker-search-input {
+    width: 100%;
+    padding: 10px 35px 10px 12px;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.order-tracker-search-input:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+.order-tracker-search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #8a9ba8;
+}
+
+/* Status Categories */
+.order-tracker-status-categories {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border: 1px solid #e1e8ed;
+}
+
+.order-tracker-status-categories h2 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 8px;
+}
+
+.order-tracker-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.order-tracker-status-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #e1e8ed;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.order-tracker-status-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.order-tracker-status-card.active {
+    border-color: #dc3545;
+    background: #fff5f5;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.15);
+}
+
+.order-tracker-status-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: white;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.order-tracker-status-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.order-tracker-status-name {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.order-tracker-status-count {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #dc3545;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Orders Section */
+.order-tracker-orders-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e8ed;
+}
+
+.order-tracker-orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.order-tracker-orders-header h2 {
+    margin: 0;
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-tracker-add-order-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.order-tracker-add-order-btn:hover {
+    background: #059669;
+}
+
+/* No Orders State */
+.order-tracker-no-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #6b7280;
+}
+
+.order-tracker-no-orders-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    opacity: 0.4;
+}
+
+.order-tracker-no-orders h3 {
+    margin: 0 0 8px 0;
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.order-tracker-no-orders p {
+    margin: 0;
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+/* TABLE - CENTERED HEADERS AND DATA */
+.order-tracker-orders-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e1e8ed;
+    background: white;
+}
+
+.order-tracker-table-header {
+    display: grid;
+    grid-template-columns: 50px 100px 110px 150px 100px 305px 100px 90px 100px 70px 1fr;
+    background: #dc3545;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.order-tracker-header-cell {
+    padding: 12px 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-tracker-table-row {
+    display: grid;
+    grid-template-columns: 50px 100px 110px 150px 100px 305px 100px 90px 100px 70px 1fr;
+    border-bottom: 1px solid #e1e8ed;
+    background: white;
+}
+
+.order-tracker-table-row:hover {
+    background-color: #f9fafb;
+}
+
+.order-tracker-cell {
+    padding: 12px 8px;
+    border-right: 1px solid #e1e8ed;
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    text-align: center;
+}
+
+.order-tracker-cell.order-tracker-sr {
+    font-weight: 700;
+    color: #dc3545;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.order-tracker-cell.font-weight-bold {
+    font-weight: 600;
+    color: #1f2937;
+    justify-content: center;
+}
+
+.order-tracker-cell.order-tracker-amount {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    color: #059669;
+    justify-content: center;
+}
+
+.order-tracker-status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 295px;
+    margin: 0 auto;
+}
+
+.order-tracker-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.order-tracker-edit-btn,
+.order-tracker-view-btn,
+.order-tracker-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.order-tracker-edit-btn:hover {
+    background: #dbeafe;
+}
+
+.order-tracker-view-btn:hover {
+    background: #dcfce7;
+}
+
+.order-tracker-delete-btn:hover {
+    background: #fef2f2;
+}
+
+/* Modal Styles */
+.order-tracker-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.order-tracker-modal {
+    background: white;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1100px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.order-tracker-modal-header {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-tracker-modal-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.order-tracker-modal-close {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-tracker-modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.order-tracker-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.order-tracker-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.order-tracker-form-section {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e1e8ed;
+}
+
+.order-tracker-form-section h3 {
+    margin: 0 0 16px 0;
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 8px;
+}
+
+.order-tracker-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.order-tracker-form-row:last-child {
+    margin-bottom: 0;
+}
+
+.order-tracker-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-tracker-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.order-tracker-form-group label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.85rem;
+}
+
+/* ✅ DEFAULT INPUT STYLE - LIGHT ORANGE FOR MOST FIELDS */
+.order-tracker-form-input,
+.order-tracker-form-textarea {
+    padding: 10px 12px;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    background: #fef3e2 !important;
+    /* ✅ LIGHT ORANGE - Default */
+    font-family: inherit;
+}
+
+/* ✅ SKY BLUE INPUT FIELDS - SPECIFIC CLASSES */
+.order-tracker-form-input.sky-blue,
+.order-tracker-form-textarea.sky-blue {
+    background: #e0f2fe !important;
+    /* ✅ SKY BLUE */
+}
+
+/* ✅ LIGHT GREY INPUT FIELD - SPECIFIC CLASS */
+.order-tracker-form-input.light-grey,
+.order-tracker-form-textarea.light-grey {
+    background: #f5f5f5 !important;
+    /* ✅ LIGHT GREY */
+}
+
+.order-tracker-form-input:focus,
+.order-tracker-form-textarea:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+.order-tracker-form-input.error {
+    border-color: #dc3545;
+    background-color: #fff5f5 !important;
+}
+
+.order-tracker-form-textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.order-tracker-error {
+    color: #dc3545;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.order-tracker-modal-footer {
+    background: #f9fafb;
+    border-top: 1px solid #e1e8ed;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.order-tracker-cancel-btn,
+.order-tracker-save-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border: none;
+}
+
+.order-tracker-cancel-btn {
+    background: #6b7280;
+    color: white;
+}
+
+.order-tracker-cancel-btn:hover {
+    background: #4b5563;
+}
+
+.order-tracker-save-btn {
+    background: #10b981;
+    color: white;
+}
+
+.order-tracker-save-btn:hover {
+    background: #059669;
+}
+
+/* ✅ VIEW MODAL SPECIFIC STYLES */
+
+/* View Modal Styling */
+.order-tracker-view-modal {
+    border: 2px solid #10b981;
+}
+
+.order-tracker-view-header {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+/* View Grid Layout */
+.order-tracker-view-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.order-tracker-view-section {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.order-tracker-view-section h3 {
+    margin: 0 0 16px 0;
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #10b981;
+    padding-bottom: 8px;
+}
+
+.order-tracker-view-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-tracker-view-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.order-tracker-view-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-tracker-view-field-wide {
+    grid-column: span 2;
+}
+
+.order-tracker-view-field-full {
+    grid-column: span 2;
+}
+
+.order-tracker-view-field label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.order-tracker-view-field span {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #1f2937;
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Highlighted Fields */
+.order-tracker-view-highlight {
+    background: #fef3e2 !important;
+    border-color: #f59e0b !important;
+    font-weight: 600 !important;
+    color: #92400e !important;
+}
+
+/* Amount Fields */
+.order-tracker-view-amount {
+    background: #dcfce7 !important;
+    border-color: #16a34a !important;
+    font-weight: 600 !important;
+    color: #15803d !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+}
+
+/* Profit Fields */
+.order-tracker-view-profit {
+    background: #dbeafe !important;
+    border-color: #2563eb !important;
+    font-weight: 600 !important;
+    color: #1d4ed8 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+}
+
+/* Status Badge */
+.order-tracker-view-status-badge {
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: white !important;
+    border: none !important;
+    letter-spacing: 0.5px;
+    display: inline-block !important;
+    width: fit-content !important;
+}
+
+/* Notes Styling */
+.order-tracker-view-notes {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #1f2937;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    min-height: 60px;
+}
+
+/* View Footer */
+.order-tracker-view-footer {
+    background: #f8fafc !important;
+    justify-content: space-between !important;
+}
+
+.order-tracker-view-close-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border: none;
+    background: #6b7280;
+    color: white;
+}
+
+.order-tracker-view-close-btn:hover {
+    background: #4b5563;
+}
+
+.order-tracker-view-edit-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border: none;
+    background: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.order-tracker-view-edit-btn:hover {
+    background: #c82333;
+}
+
+/* ✅ ATTACHMENTS SECTION STYLES */
+
+/* Upload Area */
+.order-tracker-upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.order-tracker-upload-area:hover {
+    border-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.order-tracker-upload-area.dragging {
+    border-color: #f59e0b;
+    background: #fffbeb;
+    transform: scale(1.02);
+}
+
+.order-tracker-upload-disabled {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f3f4f6;
+    opacity: 0.7;
+}
+
+.order-tracker-upload-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #6b7280;
+}
+
+.order-tracker-upload-text {
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.order-tracker-upload-subtext {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.order-tracker-browse-btn {
+    background: #f59e0b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.order-tracker-browse-btn:hover {
+    background: #d97706;
+}
+
+/* Attachments List */
+.order-tracker-attachments-list {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.order-tracker-attachment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.order-tracker-attachment-item:last-child {
+    border-bottom: none;
+}
+
+.order-tracker-attachment-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.order-tracker-file-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.order-tracker-file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.order-tracker-file-name {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.order-tracker-file-size {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.order-tracker-attachment-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.order-tracker-attachment-view-btn,
+.order-tracker-attachment-download-btn,
+.order-tracker-attachment-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.order-tracker-attachment-view-btn:hover {
+    background: #dcfce7;
+}
+
+.order-tracker-attachment-download-btn:hover {
+    background: #dbeafe;
+}
+
+.order-tracker-attachment-delete-btn:hover {
+    background: #fef2f2;
+}
+
+/* Attachments Summary */
+.order-tracker-attachments-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background: #f3f4f6;
+    border-radius: 0 0 6px 6px;
+    font-size: 0.8rem;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1500px) {
+
+    .order-tracker-table-header,
+    .order-tracker-table-row {
+        grid-template-columns: 45px 95px 105px 145px 95px 295px 95px 85px 95px 65px 1fr;
+    }
+
+    .order-tracker-status-badge {
+        max-width: 285px;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .order-tracker-table-header,
+    .order-tracker-table-row {
+        grid-template-columns: 40px 90px 100px 135px 90px 280px 90px 80px 90px 60px 1fr;
+    }
+
+    .order-tracker-status-badge {
+        max-width: 270px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .order-tracker-categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .order-tracker-table-header,
+    .order-tracker-table-row {
+        grid-template-columns: 40px 85px 95px 125px 85px 270px 85px 75px 85px 55px 1fr;
+    }
+
+    .order-tracker-status-badge {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 900px) {
+    .order-tracker-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-tracker-stats-search {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .order-tracker-search-container {
+        max-width: 100%;
+    }
+
+    .order-tracker-orders-table {
+        overflow-x: auto;
+    }
+
+    .order-tracker-table-header,
+    .order-tracker-table-row {
+        grid-template-columns: 50px 100px 110px 150px 100px 305px 100px 90px 100px 70px 150px;
+        min-width: 1225px;
+    }
+
+    .order-tracker-status-badge {
+        max-width: 295px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-tracker-container {
+        padding: 15px;
+    }
+
+    .order-tracker-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .order-tracker-header-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .order-tracker-categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-tracker-orders-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .order-tracker-modal {
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .order-tracker-form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .order-tracker-view-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .order-tracker-view-field-wide,
+    .order-tracker-view-field-full {
+        grid-column: span 1;
+    }
+
+    .order-tracker-view-footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .order-tracker-upload-area {
+        padding: 30px 15px;
+    }
+
+    .order-tracker-upload-icon {
+        font-size: 1.5rem;
+    }
+
+    .order-tracker-attachment-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .order-tracker-attachment-actions {
+        align-self: flex-end;
+    }
+
+    .order-tracker-attachments-summary {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+}   

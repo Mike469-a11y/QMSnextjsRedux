@@ -1,0 +1,1718 @@
+/* ✅ SUBMITTED DATA COMPONENT STYLES - ENHANCED VERSION */
+
+/* ========================================
+   CONTAINER & LAYOUT
+======================================== */
+.submitted-data-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================================
+   HEADER SECTION
+======================================== */
+.submitted-data-header {
+    background: linear-gradient(135deg, #6f42c1, #563d7c);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submitted-data-header .submitted-data-header-left h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submitted-data-header .submitted-data-header-left p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.submitted-data-header .submitted-data-header-right .submitted-data-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+.submitted-data-user-info .submitted-data-user-role {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+.submitted-data-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.submitted-data-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6f42c1;
+    border-radius: 50%;
+    animation: submitted-data-spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes submitted-data-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   NAVIGATION BREADCRUMB
+======================================== */
+.submitted-data-archive-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.submitted-data-nav-item {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.submitted-data-nav-item:hover {
+    background: #e9ecef;
+    transform: translateY(-1px);
+}
+
+.submitted-data-nav-item.submitted-data-active {
+    background: linear-gradient(135deg, #6f42c1, #563d7c);
+    color: white;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+}
+
+.submitted-data-nav-separator {
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   MAIN CONTENT AREA
+======================================== */
+.submitted-data-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* ========================================
+   YEAR SELECTION VIEW
+======================================== */
+.submitted-data-year-selection-view {
+    padding: 30px;
+}
+
+.submitted-data-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f1f3f4;
+}
+
+.submitted-data-section-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.submitted-data-archive-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.submitted-data-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.submitted-data-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6f42c1;
+    margin-bottom: 5px;
+}
+
+.submitted-data-stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.submitted-data-years-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.submitted-data-year-card {
+    background: linear-gradient(135deg, #f8f9ff, #ffffff);
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submitted-data-year-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(111, 66, 193, 0.2);
+    border-color: #6f42c1;
+}
+
+.submitted-data-year-card-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6f42c1;
+}
+
+.submitted-data-year-entry-count {
+    font-size: 1.1rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.submitted-data-year-card-footer {
+    margin-top: 20px;
+    color: #6f42c1;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   MONTH SELECTION VIEW
+======================================== */
+.submitted-data-month-selection-view {
+    padding: 30px;
+}
+
+.submitted-data-months-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.submitted-data-month-card {
+    background: linear-gradient(135deg, #fff8f0, #ffffff);
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-month-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.15);
+    border-color: #ff9800;
+}
+
+.submitted-data-month-card-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff9800;
+}
+
+.submitted-data-month-entry-count {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.submitted-data-month-card-footer {
+    margin-top: 15px;
+    color: #ff9800;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   ENTRIES VIEW
+======================================== */
+.submitted-data-entries-view {
+    padding: 30px;
+}
+
+.submitted-data-entries-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.submitted-data-search-group {
+    flex: 1;
+    max-width: 500px;
+}
+
+.submitted-data-search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-search-input:focus {
+    outline: none;
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+}
+
+.submitted-data-entries-count {
+    background: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   ENTRIES TABLE
+======================================== */
+.submitted-data-entries-table {
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.submitted-data-table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 200px;
+    gap: 0;
+    background: linear-gradient(135deg, #6f42c1, #563d7c);
+    color: white;
+}
+
+.submitted-data-header-cell {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submitted-data-header-cell:last-child {
+    border-right: none;
+}
+
+.submitted-data-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 200px;
+    gap: 0;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.submitted-data-table-row:hover {
+    background: #f8f9ff;
+}
+
+.submitted-data-table-row:last-child {
+    border-bottom: none;
+}
+
+.submitted-data-cell {
+    padding: 20px;
+    border-right: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.submitted-data-cell:last-child {
+    border-right: none;
+}
+
+/* ✅ ENHANCED: Entry Info Cell with QMS ID */
+.submitted-data-entry-info .submitted-data-entry-ids {
+    margin-bottom: 8px;
+}
+
+.submitted-data-entry-info .submitted-data-qms-id {
+    font-weight: 700;
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.submitted-data-entry-info .submitted-data-archive-id {
+    font-weight: 600;
+    color: #6f42c1;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.submitted-data-entry-info .submitted-data-bid-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.submitted-data-entry-info .submitted-data-bid-details {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.submitted-data-bid-details span {
+    background: #f8f9fa;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.submitted-data-entry-info .submitted-data-sourcer-info {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Submission Details Cell */
+.submitted-data-submission-details .submitted-data-submission-date {
+    font-weight: 600;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.submitted-data-submission-details .submitted-data-submission-by {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.submitted-data-submission-details .submitted-data-final-amount {
+    background: #e8f5e8;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #155724;
+    margin-top: 5px;
+}
+
+.submitted-data-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.submitted-data-status-badge.submitted-data-submitted {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+/* Vendor Info Cell */
+.submitted-data-vendor-info .submitted-data-vendor-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.submitted-data-vendor-info .submitted-data-vendor-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 8px;
+}
+
+.submitted-data-vendor-info .submitted-data-vendor-details {
+    display: flex;
+    gap: 10px;
+}
+
+.submitted-data-vendor-details span {
+    background: #f8f9fa;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #495057;
+}
+
+.submitted-data-no-vendor-data {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Actions Cell */
+.submitted-data-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.submitted-data-btn-view-entry {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-btn-view-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+}
+
+.submitted-data-btn-edit-entry {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-btn-edit-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.submitted-data-btn-delete-entry {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-btn-delete-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* ========================================
+   NO DATA STATES
+======================================== */
+.submitted-data-no-data-state,
+.submitted-data-no-entries-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.submitted-data-no-data-icon,
+.submitted-data-no-entries-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.submitted-data-no-data-state h3,
+.submitted-data-no-entries-state h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.submitted-data-no-data-state p,
+.submitted-data-no-entries-state p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.submitted-data-help-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* ========================================
+   ENHANCED ENTRY DETAILS MODAL
+======================================== */
+.submitted-data-entry-details-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.submitted-data-entry-details-modal {
+    background: white;
+    border-radius: 15px;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.submitted-data-entry-details-modal-header {
+    background: linear-gradient(135deg, #6f42c1, #563d7c);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submitted-data-entry-details-modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.submitted-data-modal-header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.submitted-data-modal-header-actions .submitted-data-btn-edit-entry,
+.submitted-data-modal-header-actions .submitted-data-btn-delete-entry {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.submitted-data-modal-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.submitted-data-entry-details-modal-body {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ✅ ENHANCED: Modal Sections */
+.submitted-data-modal-section {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid #6f42c1;
+}
+
+.submitted-data-modal-section h4 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submitted-data-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.submitted-data-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submitted-data-info-item.submitted-data-full-width {
+    grid-column: 1 / -1;
+}
+
+.submitted-data-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.submitted-data-value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.submitted-data-status-approved {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.submitted-data-remarks-text {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+    color: #2c3e50;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+/* ✅ VENDOR CAROUSEL IN MODAL */
+.submitted-data-vendor-carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.submitted-data-vendor-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submitted-data-vendor-nav-btn {
+    background: #6f42c1;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-vendor-nav-btn:hover:not(:disabled) {
+    background: #563d7c;
+}
+
+.submitted-data-vendor-nav-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.submitted-data-vendor-counter {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.submitted-data-vendor-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(111, 66, 193, 0.1);
+    border-radius: 20px;
+}
+
+.submitted-data-vendor-indicator {
+    background: #e9ecef;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.submitted-data-vendor-indicator.active {
+    background: #6f42c1;
+    color: white;
+    transform: scale(1.2);
+}
+
+.submitted-data-primary-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 0.6rem;
+}
+
+.submitted-data-vendor-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.submitted-data-vendor-title h5 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submitted-data-primary-tag {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.submitted-data-vendor-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.submitted-data-vendor-section h6 {
+    margin: 0 0 10px 0;
+    color: #495057;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.submitted-data-vendor-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.submitted-data-vendor-field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.submitted-data-vendor-field.submitted-data-full-width {
+    grid-column: 1 / -1;
+}
+
+.submitted-data-field-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+.submitted-data-field-value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.submitted-data-field-value.submitted-data-cost {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.submitted-data-field-value.submitted-data-risk-low {
+    color: #28a745;
+    background: #d4edda;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.submitted-data-field-value.submitted-data-risk-medium {
+    color: #856404;
+    background: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.submitted-data-field-value.submitted-data-risk-high {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* ✅ LINE ITEMS TABLE */
+.submitted-data-line-items {
+    margin-bottom: 15px;
+}
+
+.submitted-data-line-items-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+.submitted-data-line-item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.85rem;
+}
+
+.submitted-data-line-item-row:last-child {
+    border-bottom: none;
+}
+
+/* ✅ COST BREAKDOWN */
+.submitted-data-cost-breakdown {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.submitted-data-breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f3f4;
+    font-size: 0.9rem;
+}
+
+.submitted-data-breakdown-item:last-child {
+    border-bottom: none;
+}
+
+.submitted-data-breakdown-item.submitted-data-grand-total {
+    font-weight: 600;
+    color: #495057;
+    border-top: 2px solid #e9ecef;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.submitted-data-breakdown-item.submitted-data-final-total {
+    font-weight: 700;
+    color: #28a745;
+    background: #f8fff4;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #28a745;
+    margin-top: 10px;
+}
+
+/* ✅ ATTACHMENTS IN MODAL */
+.submitted-data-attachments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.submitted-data-btn-download-all {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-btn-download-all:hover {
+    background: #138496;
+    transform: translateY(-1px);
+}
+
+.submitted-data-attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submitted-data-attachment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-attachment-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submitted-data-attachment-info {
+    flex: 1;
+}
+
+.submitted-data-attachment-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.submitted-data-file-type {
+    color: #6c757d;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.submitted-data-attachment-size {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.submitted-data-attachment-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.submitted-data-btn-preview,
+.submitted-data-btn-download {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.submitted-data-btn-preview:hover {
+    background: #e9ecef;
+    border-color: #6c757d;
+}
+
+.submitted-data-btn-download:hover {
+    background: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+}
+
+/* ✅ SUBMISSION CALCULATIONS */
+.submitted-data-submission-calculations {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.submitted-data-calc-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.submitted-data-calc-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submitted-data-calc-item.submitted-data-full-width {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submitted-data-calc-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.submitted-data-calc-value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.submitted-data-calc-value.submitted-data-cost {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.submitted-data-calc-value.submitted-data-total {
+    color: #495057;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.submitted-data-calc-value.submitted-data-final-amount {
+    color: #28a745;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background: #f8fff4;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 2px solid #28a745;
+}
+
+/* ✅ WORKFLOW STAGES */
+.submitted-data-workflow-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.submitted-data-workflow-stage {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.submitted-data-stage-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 50%;
+}
+
+.submitted-data-stage-info {
+    flex: 1;
+}
+
+.submitted-data-stage-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.submitted-data-stage-details {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Modal Footer */
+.submitted-data-entry-details-modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitted-data-btn-close-modal {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submitted-data-btn-close-modal:hover {
+    background: #5a6268;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 1200px) {
+    .submitted-data-container {
+        padding: 15px;
+    }
+
+    .submitted-data-table-header,
+    .submitted-data-table-row {
+        grid-template-columns: 1fr 1fr 1fr 180px;
+    }
+
+    .submitted-data-entry-details-modal {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .submitted-data-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .submitted-data-archive-stats {
+        justify-content: center;
+    }
+
+    .submitted-data-entries-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submitted-data-search-group {
+        max-width: none;
+    }
+
+    .submitted-data-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submitted-data-vendor-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .submitted-data-calc-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .submitted-data-years-grid,
+    .submitted-data-months-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submitted-data-table-header,
+    .submitted-data-table-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .submitted-data-table-header {
+        display: none;
+    }
+
+    .submitted-data-cell {
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+        padding: 15px;
+    }
+
+    .submitted-data-entry-details-modal {
+        margin: 10px;
+        max-height: 95vh;
+    }
+
+    .submitted-data-entry-details-modal-body {
+        padding: 20px;
+    }
+
+    .submitted-data-vendor-carousel-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .submitted-data-line-items-header,
+    .submitted-data-line-item-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .submitted-data-line-items-header {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .submitted-data-header .submitted-data-header-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .submitted-data-section-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .submitted-data-archive-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submitted-data-nav-item {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .submitted-data-archive-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .submitted-data-entries-controls {
+        gap: 10px;
+    }
+
+    .submitted-data-search-input {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .submitted-data-entries-count {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .submitted-data-year-card,
+    .submitted-data-month-card {
+        padding: 20px;
+    }
+
+    .submitted-data-year-card-header h3 {
+        font-size: 2rem;
+    }
+
+    .submitted-data-month-card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .submitted-data-entry-details-modal {
+        margin: 5px;
+        max-height: 98vh;
+    }
+
+    .submitted-data-entry-details-modal-body {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .submitted-data-vendor-navigation {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .submitted-data-vendor-nav-btn {
+        flex: 1;
+        margin: 0 5px;
+    }
+
+    .submitted-data-actions {
+        gap: 6px;
+    }
+
+    .submitted-data-btn-view-entry,
+    .submitted-data-btn-edit-entry,
+    .submitted-data-btn-delete-entry {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ========================================
+   EXTRA SMALL DEVICES (320px and below)
+======================================== */
+@media (max-width: 320px) {
+    .submitted-data-container {
+        padding: 10px;
+    }
+
+    .submitted-data-header {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+
+    .submitted-data-header .submitted-data-header-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .submitted-data-archive-navigation {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+
+    .submitted-data-nav-item {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .submitted-data-content {
+        border-radius: 10px;
+    }
+
+    .submitted-data-year-selection-view,
+    .submitted-data-month-selection-view,
+    .submitted-data-entries-view {
+        padding: 20px 15px;
+    }
+
+    .submitted-data-section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .submitted-data-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .submitted-data-stat-label {
+        font-size: 0.8rem;
+    }
+
+    .submitted-data-year-card,
+    .submitted-data-month-card {
+        padding: 15px;
+    }
+
+    .submitted-data-year-card-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .submitted-data-month-card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .submitted-data-cell {
+        padding: 12px 15px;
+    }
+
+    .submitted-data-entry-details-modal {
+        margin: 2px;
+        border-radius: 10px;
+    }
+
+    .submitted-data-entry-details-modal-header {
+        padding: 15px;
+    }
+
+    .submitted-data-entry-details-modal-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .submitted-data-entry-details-modal-body {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .submitted-data-modal-section {
+        padding: 15px;
+    }
+
+    .submitted-data-entry-details-modal-footer {
+        padding: 15px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+    .submitted-data-container {
+        background: white;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .submitted-data-header {
+        background: #6f42c1 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .submitted-data-nav-item,
+    .submitted-data-btn-view-entry,
+    .submitted-data-btn-edit-entry,
+    .submitted-data-btn-delete-entry {
+        display: none;
+    }
+
+    .submitted-data-entries-table {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+
+    .submitted-data-table-header {
+        background: #f8f9fa !important;
+        color: #212529 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .submitted-data-table-row {
+        break-inside: avoid;
+    }
+
+    .submitted-data-entry-details-modal-overlay {
+        display: none;
+    }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+======================================== */
+@media (prefers-contrast: high) {
+    .submitted-data-header {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .submitted-data-nav-item {
+        border: 2px solid #000000;
+    }
+
+    .submitted-data-nav-item.submitted-data-active {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .submitted-data-year-card,
+    .submitted-data-month-card {
+        border: 2px solid #000000;
+    }
+
+    .submitted-data-table-header {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .submitted-data-btn-view-entry {
+        background: #0066cc;
+        border: 2px solid #000000;
+    }
+
+    .submitted-data-btn-edit-entry {
+        background: #ff9900;
+        border: 2px solid #000000;
+        color: #000000;
+    }
+
+    .submitted-data-btn-delete-entry {
+        background: #cc0000;
+        border: 2px solid #000000;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION PREFERENCE
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    .submitted-data-loading-spinner {
+        animation: none;
+    }
+
+    .submitted-data-nav-item,
+    .submitted-data-year-card,
+    .submitted-data-month-card,
+    .submitted-data-btn-view-entry,
+    .submitted-data-btn-edit-entry,
+    .submitted-data-btn-delete-entry,
+    .submitted-data-vendor-nav-btn,
+    .submitted-data-btn-close-modal {
+        transition: none;
+    }
+
+    .submitted-data-year-card:hover,
+    .submitted-data-month-card:hover,
+    .submitted-data-btn-view-entry:hover,
+    .submitted-data-btn-edit-entry:hover,
+    .submitted-data-btn-delete-entry:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   FOCUS VISIBLE STYLES (ACCESSIBILITY)
+======================================== */
+.submitted-data-nav-item:focus-visible,
+.submitted-data-year-card:focus-visible,
+.submitted-data-month-card:focus-visible,
+.submitted-data-search-input:focus-visible,
+.submitted-data-btn-view-entry:focus-visible,
+.submitted-data-btn-edit-entry:focus-visible,
+.submitted-data-btn-delete-entry:focus-visible,
+.submitted-data-vendor-nav-btn:focus-visible,
+.submitted-data-modal-close-btn:focus-visible,
+.submitted-data-btn-close-modal:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+======================================== */
+.submitted-data-entry-details-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.submitted-data-entry-details-modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.submitted-data-entry-details-modal-body::-webkit-scrollbar-thumb {
+    background: #6f42c1;
+    border-radius: 4px;
+}
+
+.submitted-data-entry-details-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #563d7c;
+}
+
+/* ========================================
+   SELECTION STYLES
+======================================== */
+.submitted-data-container ::selection {
+    background: rgba(111, 66, 193, 0.2);
+    color: #2c3e50;
+}
+
+.submitted-data-container ::-moz-selection {
+    background: rgba(111, 66, 193, 0.2);
+    color: #2c3e50;
+}
+
+/* ✅ ADD TO EXISTING CSS - ENHANCED VENDOR FIELDS LAYOUT */
+
+/* ========================================
+   ENHANCED VENDOR FIELDS - COMPLETE LAYOUT
+======================================== */
+.submitted-data-vendor-fields-complete {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.submitted-data-vendor-fields-complete .submitted-data-vendor-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submitted-data-vendor-fields-complete .submitted-data-vendor-field.submitted-data-full-width {
+    grid-column: 1 / -1;
+}
+
+/* ✅ Vendor Margin Label */
+.submitted-data-vendor-margin-label {
+    font-size: 0.75rem;
+    color: #28a745;
+    font-weight: 600;
+    background: #f8fff4;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN FOR COMPLETE FIELDS
+======================================== */
+@media (max-width: 1200px) {
+    .submitted-data-vendor-fields-complete {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .submitted-data-vendor-fields-complete {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .submitted-data-vendor-fields-complete {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .submitted-data-vendor-fields-complete {
+        padding: 12px;
+        gap: 10px;
+    }
+}

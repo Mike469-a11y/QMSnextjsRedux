@@ -1,0 +1,215 @@
+/* ✅ MAIN EXECUTION LANDING PAGE - CLEAN MINIMAL STYLE */
+
+/* Container & Layout */
+.execution-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.execution-header {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.execution-header-left h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.execution-header-left p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.execution-header-right {
+    text-align: right;
+}
+
+.execution-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.execution-user-info strong {
+    font-weight: 600;
+}
+
+.execution-current-time {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+/* Main Content */
+.execution-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Sections Grid */
+.execution-sections-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Section Cards */
+.execution-section-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.execution-section-card:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Section Icons */
+.execution-section-icon {
+    font-size: 2rem;
+    color: #dc3545;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Section Content */
+.execution-section-content {
+    flex: 1;
+}
+
+.execution-section-content h2 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.execution-section-content p {
+    margin: 0 0 15px 0;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Section Features */
+.execution-section-features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.execution-feature {
+    color: #dc3545;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Section Arrow */
+.execution-section-arrow {
+    font-size: 1.5rem;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Quick Stats */
+.execution-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.execution-stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.execution-stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+.execution-stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .execution-sections-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .execution-quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .execution-container {
+        padding: 15px;
+    }
+
+    .execution-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .execution-header-left h1 {
+        font-size: 2rem;
+    }
+
+    .execution-section-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .execution-section-icon {
+        font-size: 1.8rem;
+        min-width: auto;
+    }
+
+    .execution-section-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .execution-quick-stats {
+        grid-template-columns: 1fr;
+    }
+}

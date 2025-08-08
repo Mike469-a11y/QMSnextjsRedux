@@ -1,0 +1,975 @@
+        /* Sourcing Dashboard Complete CSS */
+
+        /* Container and Layout */
+        .sourcing-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Section */
+        .sourcing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 8px 32px rgba(253, 126, 20, 0.2);
+        }
+
+        .sourcing-header h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sourcing-header p {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        .user-info span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ✅ NEW: Horizontal Workflow Statistics */
+        .workflow-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            min-height: 70px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fd7e14, #e55100);
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .stat-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .stat-content h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1;
+        }
+
+        .stat-content p {
+            margin: 2px 0 0 0;
+            color: #6c757d;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Controls Section - Improved Layout */
+        .sourcing-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            gap: 40px;
+        }
+
+        /* Left side - Search and Filter grouped closer */
+        .search-filter-section {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* Right side - Action buttons with proper spacing */
+        .sourcing-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #fd7e14;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .filter-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .filter-select {
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            white-space: nowrap;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #fd7e14;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.1);
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #fd7e14, #e55100);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(253, 126, 20, 0.2);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #e55100, #d84315);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(253, 126, 20, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #495057, #343a40);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #c82333, #bd2130);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+        }
+
+        /* ✅ NEW: Info button style for workflow navigation */
+        .btn-info {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(23, 162, 184, 0.2);
+        }
+
+        .btn-info:hover {
+            background: linear-gradient(135deg, #138496, #117a8b);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(23, 162, 184, 0.3);
+        }
+
+        .btn-create-first {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.2);
+            margin-top: 20px;
+        }
+
+        .btn-create-first:hover {
+            background: linear-gradient(135deg, #20c997, #17a2b8);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+
+        /* Table Container */
+        .sourcing-list-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        /* Table Styles - Updated for 11 columns */
+        .sourcing-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .sourcing-table th {
+            background: linear-gradient(135deg, #fd7e14, #e55100);
+            color: white;
+            padding: 15px 8px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e55100;
+        }
+
+        .sourcing-table td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle;
+            transition: background-color 0.2s ease;
+        }
+
+        .sourcing-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .sourcing-table tbody tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .sourcing-table tbody tr:nth-child(even):hover {
+            background-color: #f0f0f0;
+        }
+
+        /* ✅ NEW: Workflow status row highlighting */
+        .workflow-status-not_started {
+            border-left: 4px solid #6c757d;
+        }
+
+        .workflow-status-in_progress {
+            border-left: 4px solid #17a2b8;
+        }
+
+        .workflow-status-requested {
+            border-left: 4px solid #ffc107;
+        }
+
+        .workflow-status-approved {
+            border-left: 4px solid #28a745;
+        }
+
+        .workflow-status-rejected {
+            border-left: 4px solid #dc3545;
+        }
+
+        /* Fix Action column alignment */
+        .sourcing-table th:last-child,
+        .sourcing-table td:last-child {
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px 8px;
+            min-width: 140px;
+        }
+
+        /* Cell Content Styles */
+        .sourcing-id-cell {
+            font-weight: 700;
+            color: #fd7e14;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .sourcing-title {
+            font-weight: 600;
+            color: #2c3e50;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* ✅ NEW: Subtitle for bid title */
+        .sourcing-subtitle {
+            font-size: 0.8rem;
+            color: #6c757d;
+            font-weight: 400;
+            margin-top: 2px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .assigned-name,
+        .assigned-by-name {
+            text-align: center;
+            padding: 4px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        /* Due Date Styles */
+        .due-date {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            display: inline-block;
+            min-width: 80px;
+        }
+
+        .due-date.overdue {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        .due-date.due-soon {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #212529;
+        }
+
+        /* Status Badges */
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-align: center;
+            display: inline-block;
+            min-width: 70px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .status-badge.status-overdue {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        .status-badge.status-review {
+            background: linear-gradient(135deg, #fd7e14, #e55100);
+            color: white;
+        }
+
+        .status-badge.status-in-progress {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+        }
+
+        .status-badge.status-not-started {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .status-badge.status-completed {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 18px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+            min-width: 85px;
+            height: 36px;
+            margin: 0 auto;
+        }
+
+        /* ✅ NEW: Workflow Status Badges */
+        .workflow-status-badge {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-align: center;
+            display: inline-block;
+            min-width: 90px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .workflow-status-badge.status-not-started {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+        }
+
+        .workflow-status-badge.status-in-progress {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+        }
+
+        .workflow-status-badge.status-requested {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #212529;
+        }
+
+        .workflow-status-badge.status-approved {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .workflow-status-badge.status-rejected {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        /* Priority Badges */
+        .priority-badge {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-align: center;
+            display: inline-block;
+            min-width: 70px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .priority-badge.priority-critical {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        .priority-badge.priority-high {
+            background: linear-gradient(135deg, #fd7e14, #e55100);
+            color: white;
+        }
+
+        .priority-badge.priority-medium {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #212529;
+        }
+
+        .priority-badge.priority-low {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        /* Action Column Styles */
+        .source-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 40px;
+            width: 100%;
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(23, 162, 184, 0.2);
+            text-transform: none;
+            letter-spacing: 0.3px;
+            min-width: 100px;
+            height: 36px;
+            margin: 0 auto;
+        }
+
+        .btn-start:hover {
+            background: linear-gradient(135deg, #138496, #117a8b);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+        }
+
+        .btn-start:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(23, 162, 184, 0.2);
+        }
+
+        /* ✅ UPDATED: Continue Button (was Started) */
+        .btn-started {
+            background: linear-gradient(135deg, #17a2b8, #138496);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(23, 162, 184, 0.2);
+            text-transform: none;
+            letter-spacing: 0.3px;
+            min-width: 100px;
+            height: 36px;
+            margin: 0 auto;
+        }
+
+        .btn-started:hover {
+            background: linear-gradient(135deg, #138496, #117a8b);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+        }
+
+        .btn-started:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(23, 162, 184, 0.2);
+        }
+
+        /* ✅ NEW: Requested Button (disabled state) */
+        .btn-requested {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #212529;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: not-allowed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-transform: none;
+            letter-spacing: 0.3px;
+            min-width: 100px;
+            height: 36px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* ✅ NEW: Approved Button */
+        .btn-approved {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+            text-transform: none;
+            letter-spacing: 0.3px;
+            min-width: 100px;
+            height: 36px;
+            margin: 0 auto;
+        }
+
+        .btn-approved:hover {
+            background: linear-gradient(135deg, #20c997, #17a2b8);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-approved:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+        }
+
+        /* ✅ NEW: Rejected Button */
+        .btn-rejected {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(220, 53, 69, 0.2);
+            text-transform: none;
+            letter-spacing: 0.3px;
+            min-width: 100px;
+            height: 36px;
+            margin: 0 auto;
+        }
+
+        .btn-rejected:hover {
+            background: linear-gradient(135deg, #c82333, #bd2130);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+        }
+
+        .btn-rejected:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+        }
+
+        /* No Sourcing Message */
+        .no-sourcing-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .no-sourcing-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .no-sourcing-message h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        .no-sourcing-message p {
+            margin: 0 0 25px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Table Footer */
+        .table-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .results-info {
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Loading Container */
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            color: #6c757d;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #fd7e14;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .sourcing-container {
+                padding: 15px;
+            }
+
+            .sourcing-table {
+                font-size: 0.8rem;
+            }
+
+            .search-input {
+                max-width: 300px;
+            }
+
+            .sourcing-controls {
+                gap: 30px;
+            }
+
+            /* ✅ Responsive workflow stats */
+            .workflow-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .sourcing-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .sourcing-controls {
+                flex-direction: column;
+                gap: 20px;
+                align-items: stretch;
+            }
+
+            .search-filter-section {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .search-input {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .filter-container {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .filter-select {
+                width: 100%;
+            }
+
+            .sourcing-actions {
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            /* ✅ Responsive workflow stats */
+            .workflow-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sourcing-table {
+                font-size: 0.75rem;
+            }
+
+            .sourcing-table th,
+            .sourcing-table td {
+                padding: 8px 4px;
+            }
+
+            .btn-start,
+            .btn-started,
+            .btn-requested,
+            .btn-approved,
+            .btn-rejected {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                min-width: 85px;
+                height: 32px;
+            }
+
+            .status-badge.status-completed {
+                padding: 6px 10px;
+                font-size: 0.75rem;
+                min-width: 70px;
+                height: 32px;
+            }
+
+            .sourcing-controls {
+                padding: 15px;
+            }
+
+            .search-filter-section {
+                gap: 12px;
+            }
+
+            /* ✅ Mobile workflow stats */
+            .workflow-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                padding: 12px 15px;
+                min-height: 60px;
+            }
+
+            .stat-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1.3rem;
+            }
+
+            .stat-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .stat-content p {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animation for notifications */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply fade-in animation to main content */
+        .sourcing-container {
+            animation: fadeIn 0.5s ease-out;
+        }
