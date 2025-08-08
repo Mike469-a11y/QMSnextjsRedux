@@ -1,0 +1,200 @@
+/* Loading Component Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error Message Styles */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  background-color: #fff5f5;
+  margin: 1rem;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  color: #e53e3e;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.error-retry-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.error-retry-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Boundary Styles */
+.error-boundary {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  background-color: #fff5f5;
+  margin: 2rem;
+}
+
+.error-boundary h2 {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+}
+
+.error-details {
+  margin-top: 1rem;
+}
+
+.error-details p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.error-details details {
+  text-align: left;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.error-refresh-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.error-refresh-button:hover {
+  background-color: #218838;
+}
+
+/* Not Found Page Styles */
+.not-found-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+  line-height: 1;
+}
+
+.not-found-subtitle {
+  font-size: 2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.not-found-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.not-found-button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.not-found-button.primary:hover {
+  background-color: #0056b3;
+}
+
+.not-found-button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.not-found-button.secondary:hover {
+  background-color: #545b62;
+}
