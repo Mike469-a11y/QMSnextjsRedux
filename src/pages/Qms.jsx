@@ -55,7 +55,6 @@ const Qms = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [editingId, setEditingId] = useState(null);
 
-    const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
